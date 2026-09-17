@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MULTIPLY! - Numerasi Perkalian SMA</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif}
+html{scroll-behavior:smooth}
+body{background:#f4f8ff;color:#172554;line-height:1.6}
+header{background:#1d4ed8;color:#fff;padding:18px 8%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10}
+header h2{font-size:22px}
+nav a{color:#fff;text-decoration:none;margin-left:20px;font-size:14px;font-weight:bold}
+nav a:hover{opacity:.75}
+.hero{min-height:520px;display:flex;align-items:center;justify-content:space-between;gap:40px;padding:70px 8%;background:linear-gradient(135deg,#dbeafe,#eff6ff)}
+.hero-text{max-width:600px}.hero h1{font-size:58px;color:#1d4ed8;margin-bottom:10px}
+.hero h3{font-size:24px;margin-bottom:15px}.hero p{color:#475569;margin-bottom:25px}
+.btn{display:inline-block;background:#1d4ed8;color:#fff;padding:12px 22px;border-radius:10px;text-decoration:none;border:0;cursor:pointer;font-weight:bold}
+.btn:hover{background:#1e40af;transform:translateY(-2px)}
+.hero-card{background:#fff;padding:35px;border-radius:25px;box-shadow:0 15px 40px rgba(30,64,175,.15);text-align:center;min-width:280px}
+.formula{font-size:35px;font-weight:bold;color:#1d4ed8}
+section{padding:70px 8%}.section-title{text-align:center;margin-bottom:40px}
+.section-title h2{font-size:32px;color:#1e3a8a}.section-title p{color:#64748b}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;padding:25px;border-radius:18px;box-shadow:0 8px 25px rgba(15,23,42,.07);border:1px solid #dbeafe}
+.card h3{color:#2563eb;margin-bottom:10px}.example{background:#eff6ff;padding:15px;border-radius:10px;margin-top:15px}
+.tips{background:#172554;color:#fff}.tips .section-title h2{color:#fff}.tips .section-title p{color:#bfdbfe}
+.tips .card{background:#1e3a8a;border:0;color:#fff}.tips .card h3{color:#93c5fd}
+.challenge{background:#dbeafe}
+.quiz-box{max-width:700px;margin:auto;background:#fff;padding:35px;border-radius:20px;box-shadow:0 10px 30px rgba(30,64,175,.1)}
+.question-number{color:#64748b;font-size:14px;margin-bottom:10px}.question{font-size:24px;font-weight:bold;margin-bottom:25px}
+.options{display:grid;gap:12px}.option{padding:14px;background:#eff6ff;border:2px solid transparent;border-radius:10px;cursor:pointer}
+.option:hover{border-color:#2563eb;background:#dbeafe}.option.correct{background:#dcfce7;border-color:#16a34a}.option.wrong{background:#fee2e2;border-color:#dc2626}
+#nextBtn{margin-top:20px;display:none}.result{text-align:center;display:none}.score{font-size:50px;font-weight:bold;color:#1d4ed8;margin:15px}
+.timer{text-align:right;color:#2563eb;font-weight:bold;margin-bottom:15px}
+footer{background:#0f172a;color:#fff;text-align:center;padding:25px}footer span{color:#60a5fa}
+@media(max-width:800px){header{flex-direction:column;gap:10px}nav a{margin:0 7px}.hero{flex-direction:column;text-align:center}.hero h1{font-size:45px}.cards{grid-template-columns:1fr}.hero-card{width:100%}}
+</style>
+</head>
+<body>
+
+<header>
+<h2>× MULTIPLY!</h2>
+<nav>
+<a href="#materi">Materi</a><a href="#trik">Trik Cepat</a><a href="#numerasi">Numerasi</a><a href="#quiz">Quiz</a>
+</nav>
+</header>
+
+<section class="hero">
+<div class="hero-text">
+<h1>MULTIPLY!</h1>
+<h3>Numerasi Perkalian untuk Siswa SMA</h3>
+<p>Belajar perkalian dengan strategi yang lebih cepat, memahami penerapannya dalam kehidupan sehari-hari, dan uji kemampuanmu melalui quiz interaktif.</p>
+<a href="#materi" class="btn">Mulai Belajar →</a>
+</div>
+<div class="hero-card">
+<p>Contoh Perkalian Cepat</p>
+<div class="formula">48 × 25</div><hr>
+<p>48 × 100 ÷ 4</p><strong>= 1.200</strong>
+</div>
+</section>
+
+<section id="materi">
+<div class="section-title"><h2>📚 Materi Perkalian</h2><p>Pahami konsep sebelum masuk ke tantangan.</p></div>
+<div class="cards">
+<div class="card"><h3>Perkalian Bilangan</h3><p>Gunakan pemecahan bilangan untuk membuat perhitungan lebih mudah.</p><div class="example"><strong>24 × 15</strong><br>= 24 × (10 + 5)<br>= 240 + 120<br>= <strong>360</strong></div></div>
+<div class="card"><h3>Perkalian Desimal</h3><p>Kalikan seperti bilangan biasa, kemudian tentukan kembali posisi koma.</p><div class="example"><strong>2,5 × 3,2</strong><br>25 × 32 = 800<br>Jadi = <strong>8</strong></div></div>
+<div class="card"><h3>Perkalian Pecahan</h3><p>Kalikan pembilang dengan pembilang dan penyebut dengan penyebut.</p><div class="example"><strong>2/3 × 3/4</strong><br>= 6/12<br>= <strong>1/2</strong></div></div>
+</div>
+</section>
+
+<section id="trik" class="tips">
+<div class="section-title"><h2>⚡ Trik Perkalian Cepat</h2><p>Strategi sederhana untuk menghitung lebih efisien.</p></div>
+<div class="cards">
+<div class="card"><h3>× 5</h3><p>Kalikan dengan 10, kemudian bagi 2.</p><div class="example">48 × 5 = 480 ÷ 2 = <strong>240</strong></div></div>
+<div class="card"><h3>× 9</h3><p>Kalikan dengan 10, kemudian kurangi angka awal.</p><div class="example">37 × 9 = 370 − 37 = <strong>333</strong></div></div>
+<div class="card"><h3>× 25</h3><p>Kalikan dengan 100, kemudian bagi 4.</p><div class="example">48 × 25 = 4.800 ÷ 4 = <strong>1.200</strong></div></div>
+<div class="card"><h3>× 50</h3><p>Kalikan dengan 100, kemudian bagi 2.</p><div class="example">36 × 50 = 3.600 ÷ 2 = <strong>1.800</strong></div></div>
+<div class="card"><h3>× 11</h3><p>Untuk dua digit tertentu, jumlahkan kedua digit dan letakkan di tengah.</p><div class="example">23 × 11 → 2+3=5 → <strong>253</strong></div></div>
+<div class="card"><h3>Pecah Bilangan</h3><p>Pecah salah satu angka menjadi bilangan yang lebih mudah dihitung.</p><div class="example">24 × 15 = 24×10 + 24×5 = <strong>360</strong></div></div>
+</div>
+</section>
+
+<section id="numerasi" class="challenge">
+<div class="section-title"><h2>🧮 Perkalian dalam Kehidupan Nyata</h2><p>Gunakan matematika untuk menyelesaikan masalah sehari-hari.</p></div>
+<div class="cards">
+<div class="card"><h3>💰 Keuangan</h3><p>Sebuah barang seharga Rp180.000. Jika membeli 4 buah, berapa total harganya?</p><div class="example">Rp180.000 × 4 = <strong>Rp720.000</strong></div></div>
+<div class="card"><h3>📊 Data</h3><p>Sebuah survei diikuti 125 siswa. Setiap siswa mengisi 8 pertanyaan.</p><div class="example">125 × 8 = <strong>1.000 respons</strong></div></div>
+<div class="card"><h3>📐 Sains</h3><p>Sebuah benda bergerak dengan kecepatan 12 m/s selama 15 detik.</p><div class="example">12 × 15 = <strong>180 meter</strong></div></div>
+</div>
+</section>
+
+<section id="quiz">
+<div class="section-title"><h2>🎯 Quiz Challenge</h2><p>Uji kemampuan perkalianmu!</p></div>
+<div class="quiz-box">
+<div id="quizContent">
+<div class="timer">⏱️ <span id="time">60</span> detik</div>
+<div class="question-number" id="questionNumber"></div>
+<div class="question" id="question"></div>
+<div class="options" id="options"></div>
+<button class="btn" id="nextBtn" onclick="nextQuestion()">Soal Berikutnya →</button>
+</div>
+<div class="result" id="result">
+<h2>Quiz Selesai! 🎉</h2><div class="score"><span id="score">0</span>/10</div>
+<p id="resultText"></p><br><button class="btn" onclick="startQuiz()">Coba Lagi</button>
+</div>
+</div>
+</section>
+
+<footer>© 2026 <span>MULTIPLY!</span> — Microsite Numerasi Perkalian</footer>
+
+<script>
+const questions=[
+{q:"24 × 15 = ?",o:["300","340","360","380"],a:"360"},
+{q:"48 × 25 = ?",o:["1.000","1.100","1.200","1.250"],a:"1.200"},
+{q:"37 × 9 = ?",o:["323","333","343","353"],a:"333"},
+{q:"2,5 × 3,2 = ?",o:["6","7","8","9"],a:"8"},
+{q:"36 × 50 = ?",o:["1.600","1.700","1.800","1.900"],a:"1.800"},
+{q:"125 × 8 = ?",o:["800","900","1.000","1.200"],a:"1.000"},
+{q:"Rp18.000 × 4 = ?",o:["Rp62.000","Rp72.000","Rp82.000","Rp92.000"],a:"Rp72.000"},
+{q:"12 × 15 = ?",o:["150","160","180","200"],a:"180"},
+{q:"23 × 11 = ?",o:["243","253","263","273"],a:"253"},
+{q:"2/3 × 3/4 = ?",o:["1/2","2/3","3/4","1"],a:"1/2"}
+];
+
+let current=0,score=0,time=60,timer;
+const qEl=document.getElementById("question"),oEl=document.getElementById("options");
+const qnEl=document.getElementById("questionNumber"),next=document.getElementById("nextBtn"),timeEl=document.getElementById("time");
+
+function startQuiz(){
+current=0;score=0;time=60;clearInterval(timer);
+document.getElementById("quizContent").style.display="block";
+document.getElementById("result").style.display="none";
+timeEl.textContent=time;showQuestion();
+timer=setInterval(()=>{time--;timeEl.textContent=time;if(time<=0){clearInterval(timer);showResult()}},1000);
+}
+function showQuestion(){
+const q=questions[current];qnEl.textContent=`Soal ${current+1} dari ${questions.length}`;qEl.textContent=q.q;oEl.innerHTML="";next.style.display="none";
+q.o.forEach(x=>{const b=document.createElement("div");b.className="option";b.textContent=x;b.onclick=()=>selectAnswer(b,x);oEl.appendChild(b)});
+}
+function selectAnswer(btn,selected){
+const correct=questions[current].a;
+document.querySelectorAll(".option").forEach(x=>x.style.pointerEvents="none");
+if(selected===correct){btn.classList.add("correct");score++}
+else{btn.classList.add("wrong");document.querySelectorAll(".option").forEach(x=>{if(x.textContent===correct)x.classList.add("correct")})}
+next.style.display="inline-block";
+}
+function nextQuestion(){current++;if(current<questions.length)showQuestion();else showResult()}
+function showResult(){
+clearInterval(timer);document.getElementById("quizContent").style.display="none";document.getElementById("result").style.display="block";
+document.getElementById("score").textContent=score;
+document.getElementById("resultText").textContent=score<=3?"🌱 Terus latihan dan pahami triknya!":score<=6?"🔥 Lumayan! Kamu sudah memahami konsep dasar.":score<=9?"⚡ Hebat! Kemampuan numerasimu sudah bagus.":"👑 Sempurna! Kamu menaklukkan semua soal!";
+}
+startQuiz();
+</script>
+</body>
+</html>
